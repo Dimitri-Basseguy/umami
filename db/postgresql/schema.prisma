@@ -5,7 +5,8 @@ generator client {
 
 datasource db {
   provider     = "postgresql"
-  url          = env("postgresql://postgres:@Umami2025@db.hhtihrctgzlvlrmswntg.supabase.co:5432/postgres")
+  url          = env("DATABASE_URL")
+  directUrl    = env("DIRECT_DATABASE_URL") ## add it here
   relationMode = "prisma"
 }
 
